@@ -1,137 +1,127 @@
+💊 HealthMate - Personal Medicine & Health Tracker
+HealthMate is a modern, full-stack web application designed to help users effortlessly track their daily medications. Built with a clean and responsive interface, it provides a seamless experience on both desktop and mobile devices. This project was developed to showcase proficiency in the MERN stack (MySQL, Express, React, Node.js) and modern frontend design principles.
 
-# 💊 HealthMate – Personal Medicine & Health Tracker
+✨ Features
+Intuitive Dashboard: At-a-glance overview of your active and archived medications.
 
-**HealthMate** is a simple and effective web application that allows users to log, track, and manage their daily medicines. It was built as part of my internship to demonstrate full-stack development using modern web technologies and database integration.
+Multi-Page Navigation: A seamless single-page application (SPA) experience with distinct pages for different tasks.
 
----
+Focused "Add Medicine" Workflow: A dedicated page with a multi-step form and a live preview to add or update medication details.
 
-## 🚀 Features
+Advanced Filtering & Search: Instantly search your regimen and switch between active and past medications with tabbed navigation.
 
-- ✅ Add new medicines with name, dosage, method, schedule, and notes
-- 📋 View a list of all saved medicines
-- ✏️ Edit existing medicine entries
-- 🗑️ Delete medicines from the tracker
-- 🔗 Fully connected frontend, backend, and MySQL database
+Dual View Modes: Toggle between a compact list view and a detailed grid view to organize your dashboard.
 
----
+Fully Responsive: Meticulously designed to provide a perfect user experience on any device, from mobile phones to desktops.
 
-## 🛠️ Tech Stack
+Modern UI/UX: Built with a professional design system, smooth animations using Framer Motion, and user-friendly modals for a polished feel.
 
-| Layer       | Technology              |
-|-------------|--------------------------|
-| Frontend    | React.js (Vite), CSS     |
-| Backend     | Node.js, Express         |
-| Database    | MySQL                    |
-| API Testing | Postman / Thunder Client |
-| Tools       | VS Code, nodemon         |
+⚙️ Local Development Setup
+Follow these steps to get the project running on your local machine.
 
----
+1. Prerequisites (Software to Download)
+First, make sure you have the following software installed on your system.
 
-## 📁 Project Structure
+Node.js and npm: Required for running both the frontend and backend.
 
-```
-healthmate/
-├── backend/          # Node.js + Express backend
-│   ├── controllers/
-│   ├── routes/
-│   ├── db.js
-│   └── server.js
-├── frontend/         # React frontend (Vite)
-│   ├── components/
-│   ├── App.jsx
-│   ├── api.js
-│   └── main.jsx
-├── database.sql      # MySQL table structure
-├── .gitignore
-└── README.md         # This file
-```
+Download: nodejs.org (LTS version is recommended).
 
----
+Git: The version control system used to download the project.
 
-## ⚙️ Getting Started
+Download: git-scm.com
 
-### 📌 Prerequisites
+MySQL Server: The database where all your data will be stored.
 
-- Node.js & npm
-- MySQL
-- Git
+Download: MySQL Community Server
 
----
+Code Editor: A text editor for viewing and editing the code.
 
-### 🔧 Backend Setup
+Recommended: Visual Studio Code
 
-```bash
+2. Initial Setup
+A. Clone the Repository
+
+Open your terminal or command prompt and run the following command to download the project folder to your computer:
+
+git clone https://github.com/your-username/HealthMate.git
+cd HealthMate
+
+
+B. Set Up the Database
+
+Start your local MySQL server.
+
+Connect to it using your preferred SQL client (e.g., MySQL Workbench, DBeaver, or the command line).
+
+Run the entire create tables.sql script located in the project's root directory. This will create the healthmate database and all the necessary tables.
+
+3. Backend Configuration & Dependencies
+A. Navigate to the Backend Folder
+
 cd backend
-npm install
-npm run dev
-```
 
-Update your `.env` file:
+B. Install Production Dependencies
 
-```env
+Run the following commands to install the necessary packages for the server to function:
+
+npm install express
+npm install mysql2
+npm install cors
+npm install dotenv
+
+C. Install Development Dependencies
+
+This package is used to automatically restart the server when you make code changes.
+
+npm install -D nodemon
+
+(The -D flag saves it as a development dependency)
+
+D. Create Environment File
+
+Create a new file named .env in the backend directory. This file will store your secret database credentials. Add the following content, replacing the placeholder with your actual MySQL root password:
+
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_password
+DB_PASSWORD=your_mysql_password
 DB_NAME=healthmate
-```
 
----
+E. Start the Backend Server
 
-### 🌐 Frontend Setup
-
-```bash
-cd frontend
-npm install
 npm run dev
-```
 
-> Visit your app at: `http://localhost:5173`
+The backend API will now be running on http://localhost:5000. Keep this terminal window open.
 
----
+4. Frontend Configuration & Dependencies
+A. Navigate to the Frontend Folder
 
-### 🛢️ Database Setup
+Open a new terminal window and navigate to the project's frontend folder:
 
-Run the following SQL to create your table:
+cd frontend
 
-```sql
-CREATE TABLE medicines (
-  medicine_id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(100) NOT NULL,
-  dosage VARCHAR(50),
-  method ENUM('pill', 'syrup', 'tablet', 'injection') DEFAULT 'pill',
-  start_date DATE,
-  end_date DATE,
-  notes TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
+B. Install Production Dependencies
 
----
+Run these commands to install the packages required for the React application:
 
-## 🔮 Future Enhancements
+npm install react react-dom
+npm install axios
+npm install framer-motion
+npm install lucide-react
+npm install react-hot-toast
 
-- 🔔 Reminders for medication timing
-- 🗓️ Calendar view for schedules
-- 🧠 Symptom & health logs
-- 👤 User login & authentication (multi-user support)
-- 📊 Health analytics dashboard
+C. Install Development Dependencies
 
----
+These packages are needed for the development environment, such as the local server and code compilation.
 
-## 📷 Screenshots (Optional)
+npm install -D vite
+npm install -D @vitejs/plugin-react
+npm install -D eslint
 
-> Add screenshots here once uploaded in a `/screenshots` folder.
+D. Start the Frontend Server
 
----
+Once all dependencies are installed, run the development server:
 
-## 🧑‍💻 Author
+npm run dev
 
-**Lakshya Sabharwal**  
-Internship Project – 2025  
-_“Built with React, Node.js, MySQL — and a lot of learning!”_
+The application will now be running and accessible in your web browser at http://localhost:5173.
 
----
-
-## 📬 Contact / Feedback
-
-Open an issue or reach out directly if you’d like to contribute or discuss the project!
