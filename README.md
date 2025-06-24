@@ -40,11 +40,10 @@ Make sure you have the following installed:
 #### A. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/HealthMate-Medicine-Tracker.git
-cd HealthMate-Medicine-Tracker
+git clone https://github.com/your-username/HealthMate.git
+cd HealthMate
 ````
 
-*(Replace `your-username` with your actual GitHub username)*
 
 #### B. Set Up the Database
 
