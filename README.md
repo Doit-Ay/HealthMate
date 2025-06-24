@@ -126,12 +126,3 @@ npm run dev
 
 ---
 
-## 🚀 Author
-
-**Lakshya Sabharwal**
-“Built with a passion for clean code and user-centric design.”
-
-```
-
-Let me know if you want me to add badges, GIF demo, or deployment guide next!
-```
