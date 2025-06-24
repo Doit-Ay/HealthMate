@@ -44,6 +44,7 @@ A. Clone the Repository
 Open your terminal or command prompt and run the following command to download the project folder to your computer:
 
 git clone https://github.com/your-username/HealthMate.git
+
 cd HealthMate
 
 
