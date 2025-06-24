@@ -1,11 +1,3 @@
--- =================================================================
--- HealthMate: Complete Database Setup Script
--- Version 1.0
---
--- This script will drop the existing database to ensure a clean setup.
--- Running this file will create all necessary tables with the correct columns.
--- =================================================================
-
 -- ✅ STEP 1: Drop the old database if it exists to prevent conflicts
 DROP DATABASE IF EXISTS healthmate;
 
@@ -58,11 +50,3 @@ CREATE TABLE notes (
   content TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-
--- ✅ FINAL STEP: Display the created tables to confirm success
-SHOW TABLES;
-
--- Display the structure of the most important table to verify columns
-DESCRIBE medicines;
-
